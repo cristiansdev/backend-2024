@@ -3,6 +3,7 @@ package com.microservice.store.services;
 import com.microservice.store.models.Celular;
 import com.microservice.store.models.Store;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-@Service
+@Service("serviceRest")
 public class StoreServiceRestImp implements StoreService{
 
     @Autowired
