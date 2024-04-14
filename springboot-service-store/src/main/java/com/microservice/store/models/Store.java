@@ -3,12 +3,8 @@ package com.microservice.store.models;
 public class Store {
 	private Celular cel;
 	private Integer cantidad;
-	
-	public Store() {
-		
-	}
-	
-	
+	public Store() {}
+
 	public Store(Celular cel, Integer cantidad) {
 		super();
 		this.cel = cel;
