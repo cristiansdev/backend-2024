@@ -19,6 +19,16 @@
             "projectName": "springboot-service-store",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServiceEurekaApplication<springboot-service-eureka>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.eureka.springbootserviceeureka.SpringbootServiceEurekaApplication",
+            "projectName": "springboot-service-eureka",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
