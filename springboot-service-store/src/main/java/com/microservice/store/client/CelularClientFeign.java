@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.microservice.store.models.Celular;
-@FeignClient(name = "springboot-service-prueba", url = "localhost:8081")
+@FeignClient(name = "springboot-service-prueba")
 public interface CelularClientFeign {
     @GetMapping("/list")
     public List<Celular> list();
