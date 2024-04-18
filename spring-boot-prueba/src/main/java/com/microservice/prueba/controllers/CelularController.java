@@ -39,7 +39,13 @@ public class CelularController {
 		// boolean bl = false;
 		// if(!bl)
 		// 	throw new RuntimeException("No se pudo obtener el detalle del celular");
-		 return service.findById(id);
+		
+		try {
+			Thread.sleep(2000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return service.findById(id);
 	 }
 	
 	//Response Entity me permite retornar respuestas HTPP
