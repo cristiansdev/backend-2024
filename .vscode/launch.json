@@ -2,13 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringbootServiceCellphoneApplication",
+            "request": "launch",
+            "mainClass": "com.microservice.cellphone.springbootservicecellphone.SpringbootServiceCellphoneApplication",
+            "projectName": "springboot-service-cellphone"
+        },
+        {
+            "type": "java",
+            "name": "SpringbootServiceZuulServiceApplication",
+            "request": "launch",
+            "mainClass": "com.microservice.zuul.springbootservicezuulservice.SpringbootServiceZuulServiceApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SpringBootPruebaApplication<springboot-service-prueba>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.microservice.prueba.SpringBootPruebaApplication",
             "projectName": "springboot-service-prueba",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54102 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=springboot-service-prueba"
         },
         {
             "type": "java",
@@ -18,7 +32,8 @@
             "mainClass": "com.microservice.store.SpringbootServiceStoreApplication",
             "projectName": "springboot-service-store",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54122 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=springboot-service-store"
         },
         {
             "type": "java",
@@ -28,7 +43,19 @@
             "mainClass": "com.microservice.eureka.springbootserviceeureka.SpringbootServiceEurekaApplication",
             "projectName": "springboot-service-eureka",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=65197 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=springboot-service-eureka"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServiceZuulServiceApplication<springboot-service-zuul-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.zuul.springbootservicezuulservice.SpringbootServiceZuulServiceApplication",
+            "projectName": "springboot-service-zuul-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64757 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=springboot-service-zuul-service"
         }
     ]
 }
