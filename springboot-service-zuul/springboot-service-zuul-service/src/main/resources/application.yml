@@ -15,6 +15,9 @@ zuul:
   instance:
    service-id: springboot-service-prueba
    path: /api/phone/**
+  user:
+   service-id: servicio-usuarios
+   path: /api/us/**
 ribbon:
  ConnectTimeout: 3000
  ReadTimeout: 10000

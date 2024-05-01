@@ -1,4 +1,4 @@
-package com.microservicio.usuarios.springbootserviciosusuarios.entity;
+package com.microservicio.usuarios.entity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.microservicio.usuarios.springbootserviciosusuarios;
+package com.microservicio.usuarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

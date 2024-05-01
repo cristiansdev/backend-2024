@@ -1,4 +1,4 @@
-package com.microservicio.usuarios.springbootserviciosusuarios.entity;
+package com.microservicio.usuarios.entity;
 import java.io.Serializable;
 import java.util.List;
 
@@ -32,13 +32,14 @@ public class Usuario implements Serializable {
     @Column(length = 60)
     private String password;
 
-    private Boolean enable;
+    @Column(name = "enabled")
+    private Boolean enabled;
 
     private String nombre;
 
     private String apellido;
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "usuario_to_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rooles_id"),
+    @JoinTable(name = "usuarios_to_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rooles_id"),
     uniqueConstraints = { @UniqueConstraint(columnNames = { "user_id", "rooles_id" }) })
     private List<Role> roles;
 
@@ -87,11 +88,11 @@ public class Usuario implements Serializable {
     }
 
     public Boolean getEnable() {
-        return enable;
+        return enabled;
     }
 
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
+    public void setEnable(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     public String getNombre() {
