@@ -73,10 +73,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Bean
     public TokenEnhancer jwtTokenEnhancer() {
-        return new JWTTokenEnhancer();
+        return new jwtTokenEnhancer();
     }
 
-    private static class JWTTokenEnhancer implements TokenEnhancer {
+    private static class jwtTokenEnhance implements TokenEnhancer {
         @Override
         public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
             if (accessToken instanceof DefaultOAuth2AccessToken) {
