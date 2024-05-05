@@ -16,8 +16,12 @@ zuul:
    service-id: springboot-service-prueba
    path: /api/phone/**
   user:
-   service-id: servicio-usuarios
+   service-id: SPRINGBOOT-SERVICE-COMMONS-USERS
    path: /api/us/**
+  oauth:
+   service-id: demo
+   path: /api/security/**
+   sensitive-headers: Cookie, Set-Cookie
 ribbon:
  ConnectTimeout: 3000
  ReadTimeout: 10000
