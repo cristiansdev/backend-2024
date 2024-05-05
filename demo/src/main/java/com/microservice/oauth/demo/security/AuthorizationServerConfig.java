@@ -16,6 +16,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
@@ -73,7 +74,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Bean
     public TokenEnhancer jwtTokenEnhancer() {
-        return new jwtTokenEnhancer();
+        return new jwtTokenEnhance();
     }
 
     private static class jwtTokenEnhance implements TokenEnhancer {
